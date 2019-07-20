@@ -1,7 +1,7 @@
 # Data-VisualizAR
 Create and visualize 3D data and models (.obj) in augmented reality through the web with AR.js
 
-- :iphone: Open this link on your phone [https://bit.ly/2M8q1g6](https://pearsonkyle.github.io/Data-VisualizAR/static/model.html)
+- :iphone: Open this link on your phone [https://tinyurl.com/web-ar-obj](https://pearsonkyle.github.io/Data-VisualizAR/static/github.html)
 
 - Point camera at picture below 
 
@@ -19,3 +19,9 @@ URL Paths:
 /video
 /models/<name>
 ```
+
+## Coming Soon
+AR & VR visualizations of planetary collisions from SPH simulations 
+
+![](static/videos/sph_visualization.gif)
+![](static/videos/unity_sph.gif)
