@@ -23,13 +23,17 @@ URL Paths:
 ## Coming Soon
 AR & VR visualizations of planetary collisions from SPH simulations 
 
+### [Web-AR](https://github.com/jeromeetienne/AR.js)
+
 ![](static/videos/sph_visualization.gif)
-Web-AR
+
+### [Web-VR](https://aframe.io/)
 ![](static/videos/sph_web_vr.gif)
-Web-VR
+
+### [Unity](https://unity.com/)
 ![](static/videos/unity_sph.gif)
-Unity 
-## Converting [Paraview](https://www.paraview.org/) Models to Blender (.x3d -> .obj)
+
+## Converting [Paraview](https://www.paraview.org/) Models to [Blender](https://www.blender.org/) (.x3d -> .obj)
 
 1. Open Blender (v2.79)
 2. Navigate to script editor (crtl+right arrow)x3
