@@ -24,4 +24,35 @@ URL Paths:
 AR & VR visualizations of planetary collisions from SPH simulations 
 
 ![](static/videos/sph_visualization.gif)
+Web-AR
+![](static/videos/sph_web_vr.gif)
+Web-VR
 ![](static/videos/unity_sph.gif)
+Unity 
+## Converting [Paraview](https://www.paraview.org/) Models to Blender (.x3d -> .obj)
+
+1. Open Blender (v2.79)
+2. Navigate to script editor (crtl+right arrow)x3
+3. Open new script. Press button "+ New"
+4. Delete the square model, if present
+5. Paste code below 
+```python
+import bpy
+import glob 
+
+file_loc = "C:\\Users\\Kyle\\Documents\\SPH_objects\\"
+files = glob.glob(file_loc+"*.x3d")
+for i in range(len(files)):
+
+    imported_object = bpy.ops.import_scene.x3d(filepath=files[i])
+    obj = bpy.context.selected_objects[0]
+    exported_object = bpy.ops.export_scene.obj(filepath=files[i].split('.x3d')[0]+'.obj')
+
+    print('Imported name: ', obj.name)
+    bpy.data.objects[obj.name].select = True   
+    bpy.ops.object.delete()
+    
+```
+See Reference ![image](static/videos/blender_reference.png)
+
+## Creating an animation from multiple obj files in Blender 
