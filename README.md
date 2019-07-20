@@ -1,5 +1,5 @@
 # Data-VisualizAR
-Create and visualize 3D data and models (.obj) in augmented reality through the web with AR.js
+Visualize 3D models (.obj) or data using augmented reality on your mobile phone through the web with [AR.js](https://github.com/jeromeetienne/AR.js)
 
 - :iphone: Open this link on your phone [https://tinyurl.com/web-ar-obj](https://pearsonkyle.github.io/Data-VisualizAR/static/github.html)
 
