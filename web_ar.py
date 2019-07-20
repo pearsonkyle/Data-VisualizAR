@@ -2,7 +2,7 @@ from flask import Flask, current_app
 app = Flask(__name__)
 
 @app.route('/models/<page>')
-def load_model(page):
+def load_model(model):
     htmlpage = '''
     <!doctype HTML>
     <html>
@@ -19,7 +19,7 @@ def load_model(page):
     </body>
 
     </html>
-    '''.format(page,page)
+    '''.format(model,model)
     return htmlpage
 
 @app.route('/<page>')
