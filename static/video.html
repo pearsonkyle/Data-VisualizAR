@@ -1,0 +1,76 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        AFRAME.registerComponent('vidhandler', {
+            init: function () {
+                this.toggle = false;
+                this.vid = document.querySelector("#vid");
+                this.vid.pause();
+            },
+            tick: function () {
+                if (this.el.object3D.visible == true) {
+                    if (!this.toggle) {
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                } else {
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+
+        function refrespage() {
+            location.reload();
+        }
+
+        function playvid() {
+            vid.play();
+        }
+    </script>
+    <!-- IF YOU WANT TO PLAY ALPHA VIDEO THEN IT SHOULD BE IN WEBM FORMAT ........ 
+    FOR NORMAL VIDEO - MP4 or OGG -->
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded
+        artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
+        <a-assets>
+            <video preload="auto" id="vid" poster="ANY IMAGE PATH (THUMBNAIL)" response-type="arraybuffer" loop="false"
+                crossorigin webkit-playsinline playsinline controls>
+                <source src="static/videos/mandala.webm">
+                <img src="ANY IMAGE PATH (THUMBNAIL)"> Your browser does not support Or Else Please Click Reset Button.
+            </video>
+        </a-assets>
+        <a-marker id="memarker" type="pattern" url="static/patterns/pattern-earth.patt" vidhandler>
+            <a-plane position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#vid' controls></a-plane>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+    <div class="footer">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left">
+                <div class="onebleft">
+                    <button onclick="vid.playvid()" class="btn btnskips">Play (CHROME)</button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">
+                <div class="onebright">
+                    <button onclick="refrespage()" class="btn btnskips">Refresh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
