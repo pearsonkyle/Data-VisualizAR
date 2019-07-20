@@ -3,7 +3,7 @@ Visualize 3D models (.obj) or data using augmented reality on your mobile phone 
 
 - :iphone: Open this link on your phone [https://tinyurl.com/web-ar-obj](https://pearsonkyle.github.io/Data-VisualizAR/static/github.html)
 
-- Point camera at picture below 
+- :camera: Point camera at picture below 
 
 ![](static/patterns/pattern-earth.png)
 
