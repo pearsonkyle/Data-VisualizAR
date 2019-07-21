@@ -57,6 +57,7 @@ for i in range(len(files)):
     bpy.ops.object.delete()
     
 ```
+Make sure to change the file location
 
 ## Creating an animation from multiple obj files in Blender 
 ```python
