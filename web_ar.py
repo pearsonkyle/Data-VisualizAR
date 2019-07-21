@@ -1,7 +1,7 @@
 from flask import Flask, current_app
 app = Flask(__name__)
 
-@app.route('/models/<page>')
+@app.route('/models/<model>')
 def load_model(model):
     htmlpage = '''
     <!doctype HTML>

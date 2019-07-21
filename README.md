@@ -33,7 +33,7 @@ AR & VR visualizations of planetary collisions from SPH simulations
 ### [Unity](https://unity.com/)
 ![](static/videos/unity_sph.gif)
 
-## Converting [Paraview](https://www.paraview.org/) Models to [Blender](https://www.blender.org/) (.x3d -> .obj)
+## Converting [Paraview](https://www.paraview.org/) Models with [Blender](https://www.blender.org/) (.x3d -> .obj)
 
 1. Open Blender (v2.79)
 2. Navigate to script editor (crtl+right arrow)x3
@@ -60,3 +60,42 @@ for i in range(len(files)):
 See Reference ![image](static/videos/blender_reference.png)
 
 ## Creating an animation from multiple obj files in Blender 
+```python
+# https://docs.blender.org/api/2.79b/info_quickstart.html
+import bpy
+import glob 
+
+file_loc = "C:\\Users\\Kyle\\Documents\\Unity Projects\\SPH_Visualization\\Assets\\Python\\Data-VisualizAR\\static\\models\\"
+files = glob.glob(file_loc+"*.x3d")
+
+scene = bpy.context.scene
+scene.objects.keys()
+
+objs = [] 
+for i in range(len(files)):
+    imported_object = bpy.ops.import_scene.x3d(filepath=files[i])
+    obj = bpy.context.selected_objects[0]
+    obj.hide = True
+    obj.hide_render = True
+    objs.append( obj)
+
+    # delete other objects from import 
+
+def hide_true(objs,idx):
+    for i in range(len(objs)):
+        if i == idx:
+            objs[i].hide = False
+            objs[i].keyframe_insert(data_path="hide")
+            objs[i].keyframe_insert(data_path="hide_render")
+
+        else:
+            objs[i].hide = True
+            objs[i].keyframe_insert(data_path="hide")
+            objs[i].keyframe_insert(data_path="hide_render")
+
+for i in range(len(files)):
+    scene.frame_set(i*7.5)    
+    hide_true(objs,i)
+
+#exported_object = bpy.ops.export_scene.obj(filepath='SPH.obj')
+```
