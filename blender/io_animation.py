@@ -26,12 +26,12 @@ def hide_true(objs,idx):
         if i == idx:
             objs[i].hide = False
             objs[i].keyframe_insert(data_path="hide")
-            objs[i].keyframe_insert(data_path="hide_render")
+            #objs[i].keyframe_insert(data_path="hide_render")
 
         else:
             objs[i].hide = True
             objs[i].keyframe_insert(data_path="hide")
-            objs[i].keyframe_insert(data_path="hide_render")
+            #objs[i].keyframe_insert(data_path="hide_render")
 
 for i in range(len(files)):
     scene.frame_set(i*7.5)    

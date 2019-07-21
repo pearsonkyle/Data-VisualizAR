@@ -57,7 +57,6 @@ for i in range(len(files)):
     bpy.ops.object.delete()
     
 ```
-See Reference ![image](static/videos/blender_reference.png)
 
 ## Creating an animation from multiple obj files in Blender 
 ```python
@@ -86,12 +85,12 @@ def hide_true(objs,idx):
         if i == idx:
             objs[i].hide = False
             objs[i].keyframe_insert(data_path="hide")
-            objs[i].keyframe_insert(data_path="hide_render")
+            #objs[i].keyframe_insert(data_path="hide_render")
 
         else:
             objs[i].hide = True
             objs[i].keyframe_insert(data_path="hide")
-            objs[i].keyframe_insert(data_path="hide_render")
+            #objs[i].keyframe_insert(data_path="hide_render")
 
 for i in range(len(files)):
     scene.frame_set(i*7.5)    
@@ -99,3 +98,5 @@ for i in range(len(files)):
 
 #exported_object = bpy.ops.export_scene.obj(filepath='SPH.obj')
 ```
+
+![](static/videos/blender_anim.gif)
