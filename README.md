@@ -30,6 +30,6 @@ URL Paths:
 ![](static/videos/sph_web_vr.gif)
 
 ### [Unity](https://unity.com/)
-[Click here for VR visualizations](https://github.com/pearsonkyle/Planetary-Collision-VR) in Unity
+[Click here for VR visualizations](https://github.com/pearsonkyle/Planetary-Collision-VR) in Unity with SteamVR
 
 ![](static/videos/sph_unity_vr.gif)
