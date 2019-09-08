@@ -22,6 +22,27 @@ def load_model(model):
     '''.format(model,model)
     return htmlpage
 
+@app.route('/animation/<model>')
+def load_animation(model):
+    htmlpage = '''
+    <!doctype HTML>
+    <html>
+    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+    <body style='margin : 0px; overflow: hidden;'>
+        <a-scene embedded arjs>
+            <a-marker id="memarker" type="pattern" url="../static/patterns/pattern-earth.patt" vidhandler>
+                <a-entity gltf-model="src: url(../static/models/{}.glb);" animation-mixer scale="0.1 0.1 0.1"> </a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+
+    </html>
+    '''.format(model,model)
+    return htmlpage
+
 @app.route('/<page>')
 def load_page(page):
     return current_app.send_static_file('{}.html'.format(page))

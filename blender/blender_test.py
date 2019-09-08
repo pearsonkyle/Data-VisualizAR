@@ -13,3 +13,7 @@ objs.append( obj)
 
 #bpy.data.objects[obj.name].select = True   
 #bpy.ops.object.delete()
+modifierName='DecimateMod'
+modifier=obj.modifiers.new(modifierName,'DECIMATE')
+modifier.ratio=1-0.3*(i+1)
+modifier.use_collapse_triangulate=True

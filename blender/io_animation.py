@@ -7,34 +7,37 @@ files = glob.glob(file_loc+"*.x3d")
 
 scene = bpy.context.scene
 scene.objects.keys()
+bpy.context.scene.render.fps = 5
+bpy.context.scene.frame_start = 0
+bpy.context.scene.frame_end = len(files)
 
 objs = [] 
 for i in range(len(files)):
     imported_object = bpy.ops.import_scene.x3d(filepath=files[i])
     obj = bpy.context.selected_objects[0]
     obj.hide = True
-    obj.hide_render = True
+    modifier=obj.modifiers.new('Decimate 0.5','DECIMATE')
+    modifier.ratio=0.5
+    modifier.use_collapse_triangulate=True
     objs.append( obj)
-
-# clean up un-necessary assets 
-#for k in bpy.data.objects.keys():
-#    bpy.data.objects[k].select = True   
-#    bpy.ops.object.delete()
 
 def hide_true(objs,idx):
     for i in range(len(objs)):
         if i == idx:
             objs[i].hide = False
             objs[i].keyframe_insert(data_path="hide")
-            #objs[i].keyframe_insert(data_path="hide_render")
-
         else:
             objs[i].hide = True
             objs[i].keyframe_insert(data_path="hide")
-            #objs[i].keyframe_insert(data_path="hide_render")
 
 for i in range(len(files)):
-    scene.frame_set(i*7.5)    
+    scene.frame_set(i)    
     hide_true(objs,i)
 
-#exported_object = bpy.ops.export_scene.obj(filepath='SPH.obj')
+for k in range(len(bpy.data.objects)-1,0,-1):
+    if 'Face' not in bpy.data.objects[k].name:
+        bpy.data.objects[k].select = True
+    else: 
+        bpy.data.objects[k].select = False 
+
+bpy.ops.object.delete()
