@@ -29,7 +29,7 @@ URL Paths:
 ### [Web-VR](https://aframe.io/)
 ![](static/videos/sph_web_vr.gif)
 
-[AR & VR visualizations](https://github.com/pearsonkyle/Planetary-Collision-VR) of planetary collisions from SPH simulations 
-
 ### [Unity](https://unity.com/)
+[Click here for VR visualizations](https://github.com/pearsonkyle/Planetary-Collision-VR) in Unity
+
 ![](static/videos/sph_unity_vr.gif)
