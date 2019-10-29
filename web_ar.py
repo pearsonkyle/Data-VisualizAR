@@ -33,7 +33,7 @@ def load_poly(model):
     <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs>
-            <a-marker id="memarker" type="pattern" url="../static/patterns/pattern-mars.patt" vidhandler>
+            <a-marker id="memarker" type="pattern" url="../static/patterns/pattern-earth.patt" vidhandler>
                 <a-entity gblock="https://poly.google.com/view/{}?key=AIzaSyCz39baiiaQ6cT146JzAN91YbHVIyf0fz4" scale="0.1 0.1 0.1"></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
