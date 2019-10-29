@@ -41,7 +41,7 @@ def load_poly(model):
     </body>
 
     </html>
-    '''.format(model,model)
+    '''.format(model)
     return htmlpage
 
 @app.route('/<page>')
