@@ -18,15 +18,17 @@ URL Paths:
 /model
 /video
 /models/<name>
+/poly/<id>
 ```
 
 ## Features
 
-### [Web-AR](https://github.com/jeromeetienne/AR.js)
+Load models from google poly
+`/poly/5NzgdDmbPwb`
 
-![](static/videos/sph_visualization.gif)
+![](static/videos/hirise_ar.gif)
 
-### [Web-VR](https://aframe.io/)
+### Web-VR Compatible
 ![](static/videos/sph_web_vr.gif)
 
 ### [Unity](https://unity.com/)
