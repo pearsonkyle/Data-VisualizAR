@@ -6,8 +6,8 @@ def load_model(model):
     htmlpage = '''
     <!doctype HTML>
     <html>
-    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
 
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs>
@@ -27,14 +27,13 @@ def load_poly(model):
     htmlpage = '''
     <!doctype HTML>
     <html>
-    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+    <script src="../static/js/aframe-google-poly-component.min.js"></script>
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs>
+        <a-scene embedded arjs google-poly="api_key:AIzaSyCz39baiiaQ6cT146JzAN91YbHVIyf0fz4">
             <a-marker id="memarker" type="pattern" url="../static/patterns/pattern-earth.patt" vidhandler>
-                <a-entity gblock="https://poly.google.com/view/{}?key=AIzaSyCz39baiiaQ6cT146JzAN91YbHVIyf0fz4" scale="0.1 0.1 0.1"></a-entity>
+                <a-google-poly src="{}" scale="0.1 0.1 0.1"></a-google-poly>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
@@ -43,6 +42,7 @@ def load_poly(model):
     </html>
     '''.format(model)
     return htmlpage
+
 
 @app.route('/<page>')
 def load_page(page):
@@ -53,6 +53,6 @@ def hello_world():
     return current_app.send_static_file('index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=True,port=4000,ssl_context='adhoc')
+    app.run(host='0.0.0.0',debug=True,port=4000)
     # https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
     
