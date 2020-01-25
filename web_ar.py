@@ -55,4 +55,3 @@ def hello_world():
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True,port=4000)
     # https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
-    
