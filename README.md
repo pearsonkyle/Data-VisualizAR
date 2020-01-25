@@ -1,11 +1,13 @@
 # Data-VisualizAR
 Visualize 3D models (.obj) or data using augmented reality on your mobile phone through the web with [AR.js](https://github.com/jeromeetienne/AR.js)
 
-- :iphone: Open this link on your phone [https://tinyurl.com/web-ar-obj](https://pearsonkyle.github.io/Data-VisualizAR/static/github.html)
+- :iphone: Open this link on your phone [https://tinyurl.com/web-ar-obj](https://pearsonkyle.github.io/Data-VisualizAR/static/github.html) or use the QR code below
 
-- :camera: Point camera at picture below 
+- :camera: Point camera at marker below 
 
-![](static/patterns/pattern-earth.png)
+![](static/patterns/pattern-kanji_qr.png)
+
+QR Compatible!
 
 ## Web server
 ```python 
