@@ -7,8 +7,6 @@ Visualize 3D models (.obj) or data using augmented reality on your mobile phone 
 
 ![](static/patterns/pattern-kanji_qr.png)
 
-QR Compatible!
-
 ## Web server
 ```python 
 python web_ar.py
