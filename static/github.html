@@ -1,16 +1,26 @@
 <!doctype HTML>
 <html>
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+<script src="../static/js/aframe.min.js"></script>
+<script src="../static/js/aframe-ar.js"></script>
 <script src="../static/js/aframe-google-poly-component.min.js"></script>
 
+<link rel="stylesheet" href="../static/css/slider.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <body style='margin : 0px; overflow: hidden;'>
+	<div class="slidecontainer">
+		<input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+	</div>
+
 	<a-scene embedded arjs google-poly="api_key:AIzaSyCz39baiiaQ6cT146JzAN91YbHVIyf0fz4">
 		<a-marker id="memarker" type="pattern" url="../static/patterns/pattern-kanji_qr.patt" vidhandler>
-			<a-google-poly src="bRsxCYNm-CU" scale="0.1 0.1 0.1" rotation="90 0 0" position="0 0 -1"></a-google-poly>
+			<a-google-poly src="alZ--xBJAkk" scale="0.25 0.25 0.25" rotation="90 0 0" position="0 0 0" id="model"></a-google-poly>
 		</a-marker>
-		<a-entity camera></a-entity>
+		<a-entity camera>
+
+		</a-entity>
 	</a-scene>
 </body>
 
+<script src="../static/js/slider.js"></script>
 </html>

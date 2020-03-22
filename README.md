@@ -31,7 +31,7 @@ Load models from google poly
 ### Web-VR Compatible
 ![](static/videos/sph_web_vr.gif)
 
-### [Unity](https://unity.com/)
-[Click here for VR visualizations](https://github.com/pearsonkyle/Planetary-Collision-VR) in Unity with SteamVR
+This particular model is one frame of an SPH simulations of two planetesimals colliding
 
-![](static/videos/sph_unity_vr.gif)
+### Photogrammetry from your mobile device
+Use the app [Display.land](https://display.land/) to create 3D models from your mobile device with videos
