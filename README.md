@@ -31,7 +31,14 @@ Load models from google poly
 ### Web-VR Compatible
 ![](static/videos/sph_web_vr.gif)
 
-This particular model is one frame of an SPH simulations of two planetesimals colliding
 
 ### Photogrammetry from your mobile device
-Use the app [Display.land](https://display.land/) to create 3D models from your mobile device with videos
+Create 3D models from video on your mobile phone with the app [Display.land](https://display.land/)
+
+![](static/videos/wildcat_family.gif)
+
+View on the app: https://displayland.app.link/YC003lrn34
+
+Download the model from google poly: https://poly.google.com/view/784CczTcxWX
+
+And use it with this AR site! 
