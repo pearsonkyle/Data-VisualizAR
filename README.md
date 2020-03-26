@@ -51,3 +51,9 @@ To view the model on the app: https://displayland.app.link/YC003lrn34
 Download the model from google poly: https://poly.google.com/view/784CczTcxWX
 
 And use it with this AR site! 
+
+
+### My collection of free 3D Models
+Feel free to use these as you please 
+
+https://poly.google.com/user/2E_yxXvhmYl
