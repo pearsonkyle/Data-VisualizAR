@@ -33,7 +33,7 @@ Load models from google poly
 
 
 ### Create Interactive Paper Plots
-![](static/videos/mars_dune.png)
+![](static/videos/mars_dune.gif)
 
 Tracking on an image such as a figure in a paper requires generating a feature set with this app: https://github.com/AR-js-org/NFT-Marker-Creator
 
