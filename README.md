@@ -32,12 +32,21 @@ Load models from google poly
 ![](static/videos/sph_web_vr.gif)
 
 
-### Photogrammetry from your mobile device
-Create 3D models from video on your mobile phone with the app [Display.land](https://display.land/)
+### Create Interactive Paper Plots
+![](static/videos/mars_dune.png)
+
+Tracking on an image such as a figure in a paper requires generating a feature set with this app: https://github.com/AR-js-org/NFT-Marker-Creator
+
+For an html example please see: https://github.com/pearsonkyle/Data-VisualizAR/blob/master/static/index.html
+
+
+
+### Create 3D models from videos on your mobile phone
+Whether you're in the field or at home, the app [Display.land](https://display.land/) allows you to do photogrammetry from your mobile device
 
 ![](static/videos/wildcat_family.gif)
 
-View on the app: https://displayland.app.link/YC003lrn34
+To view the model on the app: https://displayland.app.link/YC003lrn34
 
 Download the model from google poly: https://poly.google.com/view/784CczTcxWX
 
