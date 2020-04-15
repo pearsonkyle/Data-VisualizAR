@@ -1,5 +1,14 @@
 # Data-VisualizAR
-Visualize 3D models (.obj) or data using augmented reality on your mobile phone through the web with [AR.js](https://github.com/jeromeetienne/AR.js)
+Visualize 3D models (.obj) or data from an image using augmented reality
+
+## Mobile Application 
+
+Take a photo of any plot, select the inverse colormap and view it in 3D with augmented reality. Coming soon to Android and iOS. Made with Unity3D
+
+![](static/videos/android_preview.gif)
+
+## Try AR on the web!
+No need to download an app
 
 - :iphone: Open this link on your phone [https://tinyurl.com/web-ar-obj](https://pearsonkyle.github.io/Data-VisualizAR/static/github.html) or use the QR code below
 
@@ -7,7 +16,7 @@ Visualize 3D models (.obj) or data using augmented reality on your mobile phone 
 
 ![](static/patterns/pattern-kanji_qr.png)
 
-## Web server
+### Web server
 ```python 
 python web_ar.py
 ``` 
@@ -21,7 +30,7 @@ URL Paths:
 /poly/<id>
 ```
 
-## Features
+### Features
 
 Load models from google poly
 `/poly/5NzgdDmbPwb`
@@ -29,31 +38,20 @@ Load models from google poly
 ![](static/videos/hirise_ar.gif)
 
 ### Web-VR Compatible
+
 ![](static/videos/sph_web_vr.gif)
 
 
 ### Create Interactive Paper Plots
 ![](static/videos/mars_dune.gif)
 
+Powered by [AR.js](https://github.com/jeromeetienne/AR.js)
+
 Tracking on an image such as a figure in a paper requires generating a feature set with this app: https://github.com/AR-js-org/NFT-Marker-Creator
 
-For an html example please see: https://github.com/pearsonkyle/Data-VisualizAR/blob/master/static/index.html
-
-
-
 ### Create 3D models from videos on your mobile phone
-Whether you're in the field or at home, the app [Display.land](https://display.land/) allows you to do photogrammetry from your mobile device
+The app [Display.land](https://display.land/) allows you to do photogrammetry from your mobile device and create 3D models with your camera e.g.
 
 ![](static/videos/wildcat_family.gif)
 
-To view the model on the app: https://displayland.app.link/YC003lrn34
-
-Download the model from google poly: https://poly.google.com/view/784CczTcxWX
-
-And use it with this AR site! 
-
-
-### My collection of free 3D Models
-Feel free to use these as you please 
-
-https://poly.google.com/user/2E_yxXvhmYl
+Feel free to use these 3D models as you please: https://poly.google.com/user/2E_yxXvhmYl
