@@ -3,7 +3,7 @@ Visualize 3D models (.obj) or data from an image using augmented reality
 
 ## Mobile Application 
 
-Take a photo of any plot, select the inverse colormap and view it in 3D with augmented reality. Coming soon to Android and iOS. Made with Unity3D
+Take a photo of any plot, select the inverse colormap and view it in 3D with augmented reality. A development project is available in the `Unity/` folder
 
 ![](static/videos/android_preview.gif)
 
